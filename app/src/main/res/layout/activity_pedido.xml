@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título Pedido -->
+    <TextView
+        android:id="@+id/tvTituloPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedido"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Nombre Cliente con icono -->
+    <LinearLayout
+        android:id="@+id/layoutNombreCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono Nombre Cliente -->
+        <ImageView
+            android:id="@+id/iconNombreCliente"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/user"
+            android:background="@color/white" />
+
+        <!-- Nombre Cliente -->
+        <TextView
+            android:id="@+id/tvNombreCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre Cliente"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp" />
+    </LinearLayout>
+
+    <!-- Número Cliente con icono -->
+    <LinearLayout
+        android:id="@+id/layoutNumeroCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutNombreCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono Número Cliente -->
+        <ImageView
+            android:id="@+id/iconNumeroCliente"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/phone"
+            android:background="@color/white" />
+
+        <!-- Número Cliente -->
+        <TextView
+            android:id="@+id/tvNumeroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número Cliente"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp" />
+    </LinearLayout>
+
+    <!-- Productos con icono -->
+    <LinearLayout
+        android:id="@+id/layoutProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutNumeroCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono Productos -->
+        <ImageView
+            android:id="@+id/iconProductos"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/box"
+            android:background="@color/white" />
+
+        <!-- Productos -->
+        <TextView
+            android:id="@+id/tvProductos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Productos"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp" />
+    </LinearLayout>
+
+    <!-- Ubicación con icono -->
+    <LinearLayout
+        android:id="@+id/layoutUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icono Ubicación -->
+        <ImageView
+            android:id="@+id/iconUbicacion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ubicacion"
+            android:background="@color/white" />
+
+        <!-- Ubicación -->
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="16dp" />
+    </LinearLayout>
+
+    <!-- Botones de acciones (Llamar, WhatsApp, Maps) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp">
+
+        <!-- Botón Llamar -->
+        <Button
+            android:id="@+id/btnLlamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LLAMAR"
+            android:textColor="@android:color/black" />
+
+        <!-- Botón WhatsApp -->
+        <Button
+            android:id="@+id/btnWSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WSP"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Botón Maps -->
+        <Button
+            android:id="@+id/btnMaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAPS"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
